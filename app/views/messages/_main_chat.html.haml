@@ -1,0 +1,40 @@
+.main-chat
+  .main-chat__room-names
+    .main-chat__room-names__room-name
+      test
+      .main-chat__room-names__room-name__member
+        Member:MASA
+    .main-chat__room-names__edit-button
+      = link_to 'Edit' ,"#", class: "main-chat__room-names__edit-button__link"
+  .main-chat__message-list
+    .main-chat__message-list__name
+      masa
+      .main-chat__message-list__name__date
+        2019/12/11(Wed) 22:21:01
+    .main-chat__message-list__message
+      おはよう！
+    
+    .main-chat__message-list__name
+      masa
+      .main-chat__message-list__name__date
+        2019/12/11(Wed) 22:21:01
+    .main-chat__message-list__message
+      今日は夜から雨
+  .main-chat__message-form
+    .main-chat__message-form__group
+      .main-chat__message-form__group__text
+        Type to message
+      .main-chat__message-form__group__icon
+        %label{class: ".main-chat__message-form__group__icon__label"}
+          = icon('fas', 'image')
+          %input.main-chat__message-form__group__icon__input-box{type: "file"}
+       
+    .main-chat__message-form__button
+      Send
+      -# = form_for @message do |f|
+      -#   = f.label :text, "type a message"
+      -#   = f.text_field :text
+      -#   = f.submit "Send"
+
+
+        
