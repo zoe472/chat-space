@@ -1,7 +1,7 @@
 .side-bar{
   background-color: #253141;
   width: 300px;
-  height: 100vh;
+  float: left;
 
   &__user-name{
     height: 100px;
@@ -28,7 +28,6 @@
       &__icons{
         width: 60px;
         color: white;
-        // background-color: yellow;
         text-align: right;
         &__link{
           text-decoration: none;
