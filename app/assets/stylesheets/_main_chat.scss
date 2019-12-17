@@ -1,7 +1,6 @@
 .main-chat{
   background-color: #ffffff;
   width: calc( 100vw - 300px );
-  height: 100vh;
 
   &__room-names{
     height: 100px;
@@ -88,7 +87,6 @@
       background-color: #38aef0;
       height: 50px;
       width: 100px;
-      // padding-top: 10px;
       margin-left: 15px;
       padding-top: 15px;
       text-align: center;
