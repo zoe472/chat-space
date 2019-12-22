@@ -25,9 +25,12 @@
       padding-top: 28px;
       padding-right: 40px;
       &__link{
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 10px 20px;
+      height: 40px;
+      right: 40px;
+      line-height: 40px;
       color: rgb(6, 152, 236);
+      border: solid 1px #38aef0;
       text-decoration: none;
       }
     }
