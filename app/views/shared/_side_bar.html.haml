@@ -4,13 +4,17 @@
       .side-bar__user-name__top-item__names
         =current_user.name
       .side-bar__user-name__top-item__icons
-        =link_to "#", class:"side-bar__user-name__top-item__icons__link" do
+        =link_to new_group_path, class:"side-bar__user-name__top-item__icons__link" do
           %i.fa.fa-edit
         =link_to edit_user_path(current_user), class:"side-bar__user-name__top-item__icons__link" do
           %i.fa.fa-cog
           
         
   .side-bar__room-list
-    techcamp
-    .side-bar__room-list__contents
-      まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-bar__room-list__link
+        = link_to '#' do
+          .side-bar__room-list__link__name
+            = group.name
+          .side-bar__room-list__link__contents
+            まだメッセージがありません
