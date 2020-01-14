@@ -61,32 +61,28 @@
   &__message-form{
     height: 90px;
     background-color: #d2d2d2;
-    display: flex;
     padding: 10px 40px;
-    &__group{
-      background-color:#ffffff;
-      height: 50px;
-      width: 100%;
-      padding: 0 40px 0 10px;
+    &__message{
       display: flex;
       align-items: center;
       position: relative;
-      &__text{
-      
-        }
+      &__body{
+        background-color:#ffffff;
+        height: 50px;
+        width: 100%;
+        padding: 0 40px 0 10px;
+      }
       &__icon{
         position: absolute;
         top: 10px;
         right: 10px;
-        &__label{
-          cursor: pointer;
-          
-        }
-        &__input-box{
-          display: none;
-        }
+        cursor: pointer;
+      }
+      &__hidden{
+        display: none;
       }
     } 
+    
     &__button{
       background-color: #38aef0;
       height: 50px;
