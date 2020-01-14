@@ -39,17 +39,27 @@
   &__room-list{
     height: calc(100vh - 100px);
     background-color: #2f3e51;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: bold;
     padding-top: 20px;
     padding-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    &__contents{
-      padding-top: 5px;
-      font-size: 11px;
-    }
+      &__link{
+        &__link{
+          text-decoration: none;
+        }
+        
+        &__name{
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: bold;
+        }
+        &__contents{
+          padding-top: 5px;
+          font-size: 11px;
+          color: #ffffff;
+        }
+      }
+     
   }
 }
 
