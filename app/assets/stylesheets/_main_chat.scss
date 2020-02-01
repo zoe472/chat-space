@@ -1,6 +1,6 @@
 .main-chat{
   background-color: #ffffff;
-  width: calc( 100vw - 300px );
+  width: calc(100% - 300px);
   float: left;
 
   &__room-names{
@@ -41,6 +41,7 @@
     background-color: #fafafa;
     padding-left: 40px;
     padding-bottom: 46px;
+    overflow: scroll;
     &__name{
       color: #333333;
       font-size: 16px;
@@ -62,8 +63,11 @@
     height: 90px;
     background-color: #d2d2d2;
     padding: 10px 40px;
-    &__message{
+    &__form{
       display: flex;
+    }
+    &__message{
+      width: 100%;
       align-items: center;
       position: relative;
       &__body{
@@ -71,26 +75,29 @@
         height: 50px;
         width: 100%;
         padding: 0 40px 0 10px;
+        &__icon{
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
       }
-      &__icon{
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
       }
+      
       &__hidden{
         display: none;
       }
     } 
     
     &__button{
-      background-color: #38aef0;
-      height: 50px;
-      width: 100px;
-      margin-left: 15px;
-      padding-top: 15px;
-      text-align: center;
-      color: white;
+      &__button{
+        background-color: #38aef0;
+        height: 50px;
+        width: 100px;
+        margin-left: 15px;
+        padding-top: 15px;
+        text-align: center;
+        color: white;
+      }
     }
   }
 
