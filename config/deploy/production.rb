@@ -1,4 +1,16 @@
-server '18.177.189.180', user: 'ec2-user', roles: %w{app db web}
+# server '18.177.189.180', user: 'ec2-user', roles: %w{app db web}
+server '18.177.189.180',
+   user: "ec2-user",
+   roles: %w{web db app},
+   ssh_options: {
+       port: 3000,
+       user: "ec2-user", # overrides user setting above
+       keys: %w(~/.ssh/key_pem.pem),
+       forward_agent: true
+#     auth_methods: %w(publickey password)
+#     # password: "please use keys"
+   }
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.
