@@ -9,7 +9,7 @@ server '18.177.189.180', user: 'ec2-user', roles: %w{app db web}
 #        forward_agent: true
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
-   }
+  #  }
 
 # server-based syntax
 # ======================
