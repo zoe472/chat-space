@@ -3,7 +3,7 @@ server '18.177.189.180',
    user: "ec2-user",
    roles: %w{web db app},
    ssh_options: {
-       port: 3000,
+       port: 180,
        user: "ec2-user", # overrides user setting above
        keys: %w(~/.ssh/key_pem.pem),
        forward_agent: true
