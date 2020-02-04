@@ -25,7 +25,6 @@ $(function(){
     function buildHTML(message){
       if (message.image) {
         var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
-          <div class= "main-chat__message-list" >
             <div class= "main-chat__message-list__name">
               ${message.user_name}
               <div class="main-chat__message-list__name__date">
@@ -36,13 +35,12 @@ $(function(){
               <p class="main-chat__message-list__message__content">
                 ${message.body}
               </p>
+              <img src=${message.image} >
             </div>
-            <img src=${message.image} >
           </div>`
-        return html;
+        // return html;
       } else{
         var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
-        <div class= "main-chat__message-list">
           <div class= "main-chat__message-list__name">
             ${message.user_name}
             <div class="main-chat__message-list__name__date">
@@ -55,9 +53,10 @@ $(function(){
             </p>
           </div>
         </div>`
-      return html;
+      // return html;
     };
-  }
+    return html;
+  };
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
