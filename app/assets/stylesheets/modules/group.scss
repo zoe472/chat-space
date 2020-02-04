@@ -66,14 +66,14 @@ li {
       clear: both;
       display: block;
     }
-    &--left {
+    &__left {
       float: left;
       width: 30%;
       padding-right: 20px;
       padding-left: 20px;
       box-sizing: border-box;
     }
-    &--right {
+    &__right {
       float: right;
       width: 70%;
     }
