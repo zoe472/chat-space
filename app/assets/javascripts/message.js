@@ -1,3 +1,38 @@
+function buildHTML(message){
+  if (message.image) {
+    var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
+        <div class= "main-chat__message-list__name">
+          ${message.user_name}
+          <div class="main-chat__message-list__name__date">
+            ${message.time}
+          </div>
+        </div>
+        <div class= "main-chat__message-list__mesage">
+          <p class="main-chat__message-list__message__content">
+            ${message.body}
+          </p>
+          <img src=${message.image} >
+        </div>
+      </div>`
+    // return html;
+  } else{
+    var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
+      <div class= "main-chat__message-list__name">
+        ${message.user_name}
+        <div class="main-chat__message-list__name__date">
+          ${message.time}
+        </div>
+      </div>
+      <div class= "main-chat__message-list__mesage">
+        <p class="main-chat__message-list__message__content">
+          ${message.body}
+        </p>
+      </div>
+    </div>`
+  // return html;
+};
+return html;
+};
 $(function(){
   var reloadMessages = function() {
     last_message_id = $('.main-chat__message-list__id:last').data("message-id");
@@ -22,41 +57,6 @@ $(function(){
     });
   };
 
-    function buildHTML(message){
-      if (message.image) {
-        var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
-            <div class= "main-chat__message-list__name">
-              ${message.user_name}
-              <div class="main-chat__message-list__name__date">
-                ${message.time}
-              </div>
-            </div>
-            <div class= "main-chat__message-list__mesage">
-              <p class="main-chat__message-list__message__content">
-                ${message.body}
-              </p>
-              <img src=${message.image} >
-            </div>
-          </div>`
-        // return html;
-      } else{
-        var html = `<div class="main-chat__message-list__id" data-message-id=`+ message.id + `>
-          <div class= "main-chat__message-list__name">
-            ${message.user_name}
-            <div class="main-chat__message-list__name__date">
-              ${message.time}
-            </div>
-          </div>
-          <div class= "main-chat__message-list__mesage">
-            <p class="main-chat__message-list__message__content">
-              ${message.body}
-            </p>
-          </div>
-        </div>`
-      // return html;
-    };
-    return html;
-  };
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
